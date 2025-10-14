@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Code Quiz App</h1>
+            <p class="tagline">Learn coding concepts through interactive quizzes</p>
+        </header>
+        
+        <div class="app-content">
+            <!-- Start Screen -->
+            <div id="start-screen" class="screen active">
+                <div class="welcome-text">
+                    <h2>Welcome to the Code Quiz!</h2>
+                    <p>Test your knowledge of coding concepts with our interactive quiz.</p>
+                    <p>Answer 5 questions and earn badges based on your performance!</p>
+                    <p>Good luck!</p>
+                </div>
+                <button id="start-btn" class="btn">Start Quiz</button>
+            </div>
+            
+            <!-- Quiz Screen -->
+            <div id="quiz-screen" class="screen">
+                <div class="quiz-header">
+                    <div class="question-count">Question: <span id="current-question">1</span>/5</div>
+                    <div class="score">Score: <span id="current-score">0</span></div>
+                </div>
+                
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                
+                <div class="question-container">
+                    <h2 class="question" id="question-text"></h2>
+                    <ul class="options" id="options-list"></ul>
+                </div>
+                
+                <div class="navigation">
+                    <button id="prev-btn" class="btn" disabled>Previous</button>
+                    <button id="next-btn" class="btn">Next</button>
+                </div>
+            </div>
+            
+            <!-- Results Screen -->
+            <div id="results-screen" class="screen">
+                <div class="result-header">
+                    <h2>Quiz Completed!</h2>
+                    <p>Here's how you performed:</p>
+                </div>
+                
+                <div class="score-circle">
+                    <div class="score-value" id="final-score">0</div>
+                    <div class="score-text">Points</div>
+                </div>
+                
+                <div class="feedback" id="feedback-message"></div>
+                
+                <div class="badges-container" id="badges-container">
+                    <!-- Badges will be inserted here -->
+                </div>
+                
+                <button id="restart-btn" class="btn">Take Quiz Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
